@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+/* font-family: 'Kanit', sans-serif;
+font-family: 'Poppins', sans-serif;
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #003049;
+    color: #fff;
+}
+
+#title {
+    text-align: center;
+    margin: 20px;
+}
+
+#title h2 {
+    font-size: 2rem;
+}
+
+form{
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #473955;
+    border-radius: 5px;
+}
+
+form input{
+    width: 100vw;
+    padding: 5px 7px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+#search-btn{
+    padding: 7px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    background-color: #E26D5A;
+    color: white;
+    cursor: pointer;
+}
+
+#showmore-btn{
+    display: flex;
+    padding: 8px 12px;
+    /* text-align: center; */
+    margin: 15px auto;
+    color: white;
+    background-color: #ef233c;
+    align-self: center;
+    /* align-items: center; */
+    
+    font-weight: 700;
+    border: 1px solid #ef233c;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (min-width:800px) {
+    #title h2{
+        font-size: 3rem;
+    }
+    #search-box{
+        padding: 19px 25px;
+        font-size: 1rem;
+        color: #fff;
+        font-weight: 600;
+    }
+    ::placeholder{
+        font-size: 1.2rem;
+    }
+    #search-btn{
+        padding: 17px 30px;
+        margin: 1px -15px;
+        font-size: 1.2rem;
+    }
+    #showmore-btn{
+        padding: 7px 21px;
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
+
+}
+
+#showresult{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+#showresult img{
+    width: 100%;
+    height: 266px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media screen and (min-width:700px) {
+    #showresult{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
