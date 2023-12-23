@@ -24,7 +24,7 @@ body {
     font-size: 2rem;
 }
 
-form{
+form {
     width: 90vw;
     margin: auto;
     display: flex;
@@ -34,7 +34,7 @@ form{
     border-radius: 5px;
 }
 
-form input{
+form input {
     width: 100vw;
     padding: 5px 7px;
     color: #fff;
@@ -46,17 +46,18 @@ form input{
     font-weight: 500;
 }
 
-textarea:focus, input:focus{
+textarea:focus,
+input:focus {
     outline: none;
 }
 
-::placeholder{
+::placeholder {
     color: #fff;
     font-weight: 500;
     font-size: 1rem;
 }
 
-#search-btn{
+#search-btn {
     padding: 7px 16px;
     font-size: 1rem;
     font-weight: 600;
@@ -68,7 +69,7 @@ textarea:focus, input:focus{
     cursor: pointer;
 }
 
-#showmore-btn{
+#showmore-btn {
     display: flex;
     padding: 8px 12px;
     /* text-align: center; */
@@ -77,7 +78,7 @@ textarea:focus, input:focus{
     background-color: #ef233c;
     align-self: center;
     /* align-items: center; */
-    
+
     font-weight: 700;
     border: 1px solid #ef233c;
     border-radius: 5px;
@@ -85,33 +86,82 @@ textarea:focus, input:focus{
     display: none;
 }
 
+#showrandom-btn {
+    
+    padding: 7px 12px;
+    margin: 17px auto;
+    display: flex;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #e26d5a;
+    border: 2px solid #e26d5a;
+    color: white;
+    cursor: pointer;
+    animation: random 2s linear .5s infinite ;
+}
+
+@keyframes random {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+        /* box-shadow: 0px 0px 10px 2px #e26d5a; */
+    }
+    50%{
+        opacity: .5;
+        transform: scale(1.1);
+        /* box-shadow: 0px 0px 15px 4px #581207;
+        background-color: #581207;
+        border: 2px solid #581207; */
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+        /* box-shadow: 0px 0px 10px 2px #e26d5a; */
+    }
+}
+
+
 @media screen and (min-width:800px) {
-    #title h2{
+    #title h2 {
         font-size: 3rem;
     }
-    #search-box{
+
+    #search-box {
         padding: 19px 25px;
         font-size: 1rem;
         color: #fff;
         font-weight: 600;
     }
-    ::placeholder{
+
+    ::placeholder {
         font-size: 1.2rem;
     }
-    #search-btn{
+
+    #search-btn {
         padding: 17px 30px;
         margin: 1px -15px;
         font-size: 1.2rem;
     }
-    #showmore-btn{
+
+    #showmore-btn {
         padding: 7px 21px;
         font-size: 1.2rem;
         margin-top: 30px;
     }
 
+    #showrandom-btn {
+       
+        padding: 10px 25px;
+        margin: 24px auto;
+        font-size: 1rem;
+        font-weight: 700;
+        
+
+    }
+
 }
 
-#showresult{
+#showresult {
     width: 90%;
     margin: 20px auto;
     display: grid;
@@ -119,7 +169,7 @@ textarea:focus, input:focus{
     gap: 10px;
 }
 
-#showresult img{
+#showresult img {
     width: 100%;
     height: 266px;
     object-fit: cover;
@@ -127,7 +177,7 @@ textarea:focus, input:focus{
 }
 
 @media screen and (min-width:700px) {
-    #showresult{
+    #showresult {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
